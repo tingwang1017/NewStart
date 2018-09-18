@@ -10,6 +10,7 @@ import java.util.UUID;
 public class AddDataToDB {
 	
 	private static Connection getConn() {
+		//最原始的方法： 不同的数据库使用不同的驱动 获得数据库连接
 //	    String driver = "com.mysql.jdbc.Driver";
 //	    String url = "jdbc:mysql://127.0.0.1:3306/testfan?characterEncoding=utf8&useSSL=true";
 //	    String username = "root";
