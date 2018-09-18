@@ -1,28 +1,25 @@
-package com.test.redis;
+/*package com.test.redis;
 
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import org.junit.Before;
-import org.junit.Test;
-
 import redis.clients.jedis.Jedis;
 
 public class TestRedis {
     private Jedis jedis; 
     
-    @Before
+    @BeforeTest
     public void setup() {
         //连接redis服务器，192.168.0.100:6379
         jedis = RedisUtil.getJedis();
        
     }
     
-    /**
+    *//**
      * redis存储字符串
-     */
+     *//*
     @Test
     public void testString() {
         //-----添加数据----------  
@@ -41,9 +38,9 @@ public class TestRedis {
         
     }
     
-    /**
+    *//**
      * redis操作Map
-     */
+     *//*
     @Test
     public void testMap() {
         //-----添加数据----------  
@@ -72,9 +69,9 @@ public class TestRedis {
         }  
     }
     
-    /** 
+    *//** 
      * jedis操作List 
-     */  
+     *//*  
     @Test  
     public void testList(){  
         //开始前，先移除所有的内容  
@@ -95,9 +92,9 @@ public class TestRedis {
         System.out.println(jedis.lrange("java framework",0,-1));
     }  
     
-    /** 
+    *//** 
      * jedis操作Set 
-     */  
+     *//*  
     @Test  
     public void testSet(){  
         //添加  
@@ -134,3 +131,4 @@ public class TestRedis {
         System.out.println(RedisUtil.getJedis().get("newname"));
     }
 }
+*/
