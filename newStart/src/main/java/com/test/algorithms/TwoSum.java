@@ -29,7 +29,21 @@ public class TwoSum {
 		}
 		throw new IllegalArgumentException("No two sum solution");
 	}
-	
+
+
+	public int[] twoSum_3(int[] nums, int target){
+		Map<Integer, Integer> map = new HashMap<>();
+		for(int i=0; i<nums.length; i++){
+			map.put(nums[i], i);
+			int b = target - nums[i];
+
+			if(map.containsKey(b) && map.get(b) != i){
+				return new int[]{i,map.get(b)};
+			}
+		}
+		throw new IllegalArgumentException("No two sum solution");
+	}
+
 	public static void main(String[] args) {
 		TwoSum tosum = new TwoSum();
 		int[] A = new int[] {1,2,36,23,45,89,15,65,122,69};
@@ -44,7 +58,7 @@ public class TwoSum {
 		}
 		System.out.println("\n-------------------------------------------------------------------------------------");
 		try {
-			tosum.twoSum_1(A,target);
+			tosum.twoSum_3(A,target);
 			int[] array = tosum.twoSum_1(A,target);
 			for (int num: array) {
 				System.out.print(num + "  ");
